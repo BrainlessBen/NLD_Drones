@@ -1,5 +1,5 @@
 [] spawn {
-	private _dronesArray = ["BEN_B_Crocus_AT", "BEN_B_Crocus_AP", "BEN_O_Crocus_AT", "BEN_O_Crocus_AP", "BEN_I_Crocus_AT", "BEN_I_Crocus_AP"];
+	private _dronesArray = ["BEN_B_Crocus_AT", "BEN_B_Crocus_AP", "BEN_O_Crocus_AT", "BEN_O_Crocus_AP", "BEN_I_Crocus_AT", "BEN_I_Crocus_AP","BEN_Parrot_ANAFI"];
 	private _terminalsArray = ["B_UavTerminal", "O_UavTerminal", "I_UavTerminal"];
 
 	while { True } do {
@@ -58,7 +58,7 @@
 };
 
 [] spawn {
-	private _dronesArray = ["O_Crocus_AT", "O_Crocus_AP", "B_Crocus_AT", "B_Crocus_AP", "I_Crocus_AT", "I_Crocus_AP"];
+	private _dronesArray = ["BEN_B_Crocus_AT", "BEN_B_Crocus_AP", "BEN_O_Crocus_AT", "BEN_O_Crocus_AP", "BEN_I_Crocus_AT", "BEN_I_Crocus_AP","BEN_Parrot_ANAFI"];
 	private _signalDropTime = -1;
 
 	while {true} do {

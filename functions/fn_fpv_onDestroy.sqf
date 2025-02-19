@@ -1,7 +1,7 @@
 params ["_uav"];
 
 if (isNull _uav) exitWith {};
-if !(typeOf _uav in ["BEN_B_Crocus_AT", "BEN_B_Crocus_AP", "BEN_O_Crocus_AT", "BEN_O_Crocus_AP", "BEN_I_Crocus_AT", "BEN_I_Crocus_AP"]) exitWIth {};
+if !(typeOf _uav in ["BEN_B_Crocus_AT", "BEN_B_Crocus_AP", "BEN_O_Crocus_AT", "BEN_O_Crocus_AP", "BEN_I_Crocus_AT", "BEN_I_Crocus_AP","BEN_Parrot_ANAFI"]) exitWIth {};
 
 cutText ["", "PLAIN"];
 
