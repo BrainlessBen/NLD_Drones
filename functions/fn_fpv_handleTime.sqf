@@ -2,12 +2,12 @@ private _player = missionNamespace getVariable ["bis_fnc_moduleRemoteControl_uni
 private _uav = getConnectedUAV _player;
 
 // Если переменной нет, создаем ее с начальным временем
-if (isNil {_uav getVariable ["DB_fpv_savedTime", nil]}) then {
-    _uav setVariable ["DB_fpv_savedTime", 0];
+if (isNil {_uav getVariable ["BEN_fpv_savedTime", nil]}) then {
+    _uav setVariable ["BEN_fpv_savedTime", 0];
 };
 
 // Получаем сохраненное значение
-private _savedTime = _uav getVariable ["DB_fpv_savedTime", 0];
+private _savedTime = _uav getVariable ["BEN_fpv_savedTime", 0];
 // Устанавливаем начальное время
 private _startTime = time - _savedTime;
 
@@ -19,7 +19,7 @@ addMissionEventHandler ["EachFrame", {
 	_controlText ctrlSetText ([_timeElapsed, "MM:SS"] call BIS_fnc_secondsToString);
 
 	// Обновляем сохраненное время
-	_uav setVariable ["DB_fpv_savedTime", _timeElapsed, true];
+	_uav setVariable ["BEN_fpv_savedTime", _timeElapsed, true];
 
 	if !(missionNamespace getVariable ["ArmaFPV_isControl", false]) exitWith {
 		removeMissionEventHandler ["EachFrame", _thisEventHandler];

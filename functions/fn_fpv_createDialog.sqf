@@ -1,7 +1,7 @@
-private _layer = ("DB_FPV_Layer" call BIS_fnc_rscLayer);
+private _layer = ("BEN_FPV_Layer" call BIS_fnc_rscLayer);
 _layer cutRsc ["ArmaFPV_Dialog", "PLAIN"];
 
-call DB_fnc_fpv_handleSettings;
-call DB_fnc_fpv_handleBattery;
-call DB_fnc_fpv_handleSignal;
-call DB_fnc_fpv_handleTime;
+call BEN_fnc_fpv_handleSettings;
+call BEN_fnc_fpv_handleBattery;
+call BEN_fnc_fpv_handleSignal;
+call BEN_fnc_fpv_handleTime;

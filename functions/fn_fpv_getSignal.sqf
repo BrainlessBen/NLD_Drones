@@ -39,7 +39,7 @@ private _fnc_findRetranslators = {
 private _fnc_findJammers = {
     params ["_position", "_radius"];
     private _jammers = _position nearEntities [["Sania", "Sania_with_tripod"], _radius];
-    _jammers = _jammers select { _x getVariable ["DB_jammer_isActive", false] };
+    _jammers = _jammers select { _x getVariable ["BEN_jammer_isActive", false] };
     _jammers
 };
 
@@ -70,17 +70,17 @@ if ((_retranslatorsNearUAV isNotEqualTo []) || (_retranslatorsNearPlayer isNotEq
 };
 
 
-if (isNil "DB_timeInJammerZone") then {
-    DB_timeInJammerZone = 0;
+if (isNil "BEN_timeInJammerZone") then {
+    BEN_timeInJammerZone = 0;
 };
 
 if (_jammersNearUAV isNotEqualTo []) then {
-    DB_timeInJammerZone = DB_timeInJammerZone + diag_deltaTime;
+    BEN_timeInJammerZone = BEN_timeInJammerZone + diag_deltaTime;
 
-    private _jammerImpact = 1 - (DB_timeInJammerZone * 1.75);
+    private _jammerImpact = 1 - (BEN_timeInJammerZone * 1.75);
     _signalStrength = _signalStrength * _jammerImpact max 0;
 } else {
-    DB_timeInJammerZone = 0;
+    BEN_timeInJammerZone = 0;
 };
 
 if (_distance > _maxDistance) then {

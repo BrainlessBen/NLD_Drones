@@ -1,9 +1,9 @@
 private _delEffects = {
-	private _layer = missionNamespace getVariable ["DB_FPV_Layer_ID", -1];
+	private _layer = missionNamespace getVariable ["BEN_FPV_Layer_ID", -1];
 
 	_layer cutText ["", "PLAIN"];
 
-	private _ppEffect = missionNameSpace getVariable ["DB_fpv_ppEffect", []];
+	private _ppEffect = missionNameSpace getVariable ["BEN_fpv_ppEffect", []];
 		
 	if (_ppEffect isNotEqualTo []) then {
 		{
