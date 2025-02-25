@@ -35,7 +35,8 @@ class cfgPatches
 			"BEN_I_Crocus_AT_Bag",
 			"BEN_I_Crocus_AP_Bag",
 
-			"BEN_Parrot_ANAFI"
+			"BEN_Parrot_ANAFI",
+			"BEN_Parrot_ANAFI_Folded"
         };
 		weapons[]={};
     };
@@ -395,5 +396,4 @@ class cfgVehicles
     };
 //Other Drones
 	#include "Drones\Crocus.hpp"
-	#include "Drones\Parrot.hpp"
 };
