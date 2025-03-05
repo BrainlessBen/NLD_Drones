@@ -38,9 +38,12 @@ class cfgPatches
         units[]=
         {
 			"BEN_Parrot_ANAFI",
-			"BEN_Parrot_ANAFI_Folded"
+			"BEN_Item_Parrot_ANAFI_Folded"
         };
-		weapons[]={};
+		weapons[]=
+        {
+            "BEN_Parrot_ANAFI_Folded"
+        };
     };
 };
 
@@ -51,37 +54,21 @@ class cfgVehicles
     class BEN_Parrot_Base_F: BEN_UAV_01_base_F
     {
         displayName="Parrot ANAFI";
-        model="\A3\Drones_F\Air_F_Gamma\UAV_01\UAV_01_F.p3d";
-        picture="\NLD_Drones\Drones\Parrot\data\ui\parrot.paa";
+        model="\NLD_Drones\Drones\Parrot\UAV_01_parrot.p3d";
+        icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
+        picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
     };
 //Parrot Drones
-    class BEN_Parrot_ANAFI_Folded: BEN_Parrot_Base_F
+    class BEN_Parrot_ANAFI: BEN_Parrot_Base_F
     {
-        displayName="Parrot ANAFI Folded";
-        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";
+        author=AUTHOR;
+        displayName="Parrot ANAFI (NLD)";
+        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";// "\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot.jpg";
         _generalMacro="B_UAV_01_F";
         scope=2;
         scopeCurator=2;
         side=1;
         accuracy=0.5;
-        faction="BLU_F";
-        model="";
-        class assembleInfo
-        {
-            primary=1;
-            base="";
-            assembleTo="";
-            displayName="";
-            dissasembleTo[]=
-            {
-                "BEN_Parrot_ANAFI"
-            };
-        };
-    };
-    class BEN_Parrot_ANAFI: BEN_Parrot_ANAFI_Folded
-    {
-        author=AUTHOR;
-        displayName="Parrot ANAFI (NLD)";
         crew="B_UAV_AI";
         typicalCargo[]=
         {
@@ -89,7 +76,7 @@ class cfgVehicles
         };
         hiddenSelectionsTextures[]=
         {
-            "\NLD_Drones\Drones\Parrot\data\parrot_co.paa"
+            "\NLD_Drones\Drones\Parrot\data\uav_01_parrot_co.paa"
         };
         textureList[]=
         {
@@ -106,6 +93,57 @@ class cfgVehicles
             {
                 "BEN_Parrot_ANAFI_Folded"
             };
+        };
+    };
+    class Item_Base_f;
+    class BEN_Item_Parrot_ANAFI_Folded: Item_Base_f
+    {
+        author=AUTHOR;
+        scope=2;
+        scopeCurator=2;
+        displayName="Parrot ANAFI Folded";
+        editorCategory=BEN_Catergorie;
+		editorSubcategory=BEN_SubCatParrot;
+        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";// "\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot.jpg";
+        class TransportItems
+        {
+            class BEN_Parrot_ANAFI_Folded
+            {
+                name="BEN_Parrot_ANAFI_Folded";
+                count=1;
+            };
+        };
+        class assembleInfo
+        {
+            primary=1;
+            base="";
+            assembleTo="";
+            displayName="";
+            dissasembleTo[]=
+            {
+                "BEN_Parrot_ANAFI"
+            };
+        };
+    };
+};
+
+class cfgWeapons
+{
+    class ItemCore;
+    class BEN_Parrot_ANAFI_Folded:ItemCore
+    {
+        author=AUTHOR;
+        scope=2;
+        scopeCurator=2;
+        accuracy=0.5;
+        displayName="Parrot ANAFI Folded";
+        model="\NLD_Drones\Drones\Parrot\UAV_01_parrot_folded.p3d";
+        picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
+        class ItemInfo
+        {
+            scope=2;
+            mass=3;
+            inertia=0.2;
         };
     };
 };
