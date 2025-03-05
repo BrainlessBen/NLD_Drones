@@ -1,6 +1,15 @@
+//Default settings
 #define AUTHOR "Brainless Ben"
 #define NAME "NLD Drones"
 #define REQVER 2.14
+
+//Categorie names
+#define BEN_Catergorie "BEN_Drones"
+#define BEN_SubCatParrot "BEN_D_Parrot"
+#define BEN_SubCatCrocus "BEN_D_Crocus"
+#define BEN_SubCatRaven "BEN_D_Raven"
+
+//Drone settings
 #define DRONE_Accuracy 1.5
 #define DRONE_Camoflage 0.5
 #define DRONE_Audible 0.1

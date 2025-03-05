@@ -33,10 +33,7 @@ class cfgPatches
 			"BEN_O_Crocus_AT_Bag",
 			"BEN_O_Crocus_AP_Bag",
 			"BEN_I_Crocus_AT_Bag",
-			"BEN_I_Crocus_AP_Bag",
-
-			"BEN_Parrot_ANAFI",
-			"BEN_Parrot_ANAFI_Folded"
+			"BEN_I_Crocus_AP_Bag"
         };
 		weapons[]={};
     };
@@ -84,6 +81,29 @@ class CfgFunctions
 			{
 			};
 		};
+	};
+};
+
+class CfgEditorCategories
+{
+	class BEN_Drones
+	{
+		displayName="Drones";
+	};
+};
+class CfgEditorSubcategories
+{
+	class BEN_D_Parrot
+	{
+		displayName="Parrot";
+	};
+	class BEN_D_Crocus
+	{
+		displayName="Crocus";
+	};
+	class BEN_D_Raven
+	{
+		displayName="Raven";
 	};
 };
 
