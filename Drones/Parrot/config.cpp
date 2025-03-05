@@ -20,7 +20,7 @@ Move Erect/Kneel/Prone
     AwopPpneMstpSoptWbinDnon_AmovPpneMstpSnonWnonDnon
     AwopPpneMstpSoptWbinDnon_AmovPpneMstpSnonWnonDnon_end
 */
-#include "..\Defines.hpp"
+#include "..\..\Defines.hpp"
 
 class cfgPatches 
 {
@@ -49,10 +49,12 @@ class cfgPatches
 
 class cfgVehicles
 {
+    class UAV_01_base_F;
     class BEN_UAV_01_base_F;
 //Parrot Base
-    class BEN_Parrot_Base_F: BEN_UAV_01_base_F
+    class BEN_Parrot_Base_F: UAV_01_base_F
     {
+        author=AUTHOR;
         displayName="Parrot ANAFI";
         model="\NLD_Drones\Drones\Parrot\UAV_01_parrot.p3d";
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
