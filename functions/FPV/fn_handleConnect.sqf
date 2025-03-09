@@ -27,13 +27,13 @@
 
 			(getConnectedUAV _player) setVariable ["BEN_fpv_isUAVsignalLost", false];
 
-			call BEN_fnc_fpv_createDialog;
+			call BEN_fnc_createDialog;
 
 			waitUntil {!((typeOf (getConnectedUAV _player)) in _dronesArray) or (cameraView != "GUNNER") or !((typeOf cameraOn) in _dronesArray)};
 
 			missionNamespace setVariable ["ArmaFPV_isControl", false];
 
-			call BEN_fnc_fpv_destroyUI;
+			call BEN_fnc_destroyUI;
 		};
 
 		sleep 0.1;
@@ -66,7 +66,7 @@
 		private _connectedUAVType = typeOf _uav;
 
 		if (_connectedUAVType in _dronesArray) then {
-			private _uavSignal = [_player, _uav] call BEN_fnc_fpv_getSignal;
+			private _uavSignal = [_player, _uav] call BEN_fnc_getSignal;
 
             if (_uavSignal < 0.05) then {
                 if (_signalDropTime == -1) then {
@@ -75,7 +75,7 @@
 					private _currentTime = (time - _signalDropTime);
 
 					if (_currentTime >= 5) then {
-						[_player, _uav] call BEN_fnc_fpv_onSignalLost;
+						[_player, _uav] call BEN_fnc_onSignalLost;
 						_signalDropTime = -1;
 					};
                 };
