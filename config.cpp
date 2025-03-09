@@ -13,28 +13,7 @@ class cfgPatches
 			"A3_Drones_F",
 			"ArmaFPV_Data"
         };
-        units[]=
-        {
-            "BEN_B_UAV_01_F",
-			"BEN_I_UAV_01_F",
-			"BEN_O_UAV_01_F",
-            "BEN_B_UAV_01_backpack_F",
-			"BEN_I_UAV_01_backpack_F",
-			"BEN_O_UAV_01_backpack_F",
-
-			"BEN_B_Crocus_AT",
-			"BEN_B_Crocus_AP",
-			"BEN_O_Crocus_AT",
-			"BEN_O_Crocus_AP",
-			"BEN_I_Crocus_AT",
-			"BEN_I_Crocus_AP",
-			"BEN_B_Crocus_AT_Bag",
-			"BEN_B_Crocus_AP_Bag",
-			"BEN_O_Crocus_AT_Bag",
-			"BEN_O_Crocus_AP_Bag",
-			"BEN_I_Crocus_AT_Bag",
-			"BEN_I_Crocus_AP_Bag"
-        };
+        units[]={};
 		weapons[]={};
     };
 };
@@ -43,42 +22,29 @@ class CfgFunctions
 {
 	class BEN
 	{
+		class Drone
+		{
+			file="\NLD_Drones\functions\Drones";
+			class dissassemble{};
+			class pickup{};
+			class deploy{};
+		};
 		class FPV
 		{
-			file="\NLD_Drones\functions";
-			class fpv_createDialog
-			{
-			};
-			class fpv_getSignal
-			{
-			};
-			class fpv_handleBattery
-			{
-			};
-			class fpv_handleConnect
+			file="\NLD_Drones\functions\FPV";
+			class createDialog{};
+			class getSignal{};
+			class handleBattery{};
+			class handleSignal{};
+			class handleSettings{};
+			class handleTime{};
+			class onDestroy{};
+			class onSignalLost{};
+			class destroyUI{};
+			class droneInit{};
+			class handleConnect
 			{
 				postInit=1;
-			};
-			class fpv_handleSignal
-			{
-			};
-			class fpv_handleSettings
-			{
-			};
-			class fpv_handleTime
-			{
-			};
-			class fpv_onDestroy
-			{
-			};
-			class fpv_onSignalLost
-			{
-			};
-			class fpv_destroyUI
-			{
-			};
-			class fpv_droneInit
-			{
 			};
 		};
 	};
@@ -105,315 +71,4 @@ class CfgEditorSubcategories
 	{
 		displayName="Raven";
 	};
-};
-
-class cfgVehicles 
-{
-//Darter Base
-	class UAV_01_base_F;
-    class BEN_UAV_01_base_F: UAV_01_base_F
-    {
-        author=AUTHOR;
-        displayName="AR-2 Darter (NLD)";
-        accuracy=DRONE_Accuracy;
-		camouflage=DRONE_Camoflage;
-		audible=DRONE_Audible;
-		armor=DRONE_Armor;
-		cost=DRONE_Cost;
-		altFullForce=DRONE_AltFullForce;
-		altNoForce=DRONE_AltNoForce;
-        startDuration=DRONE_StartDuration;
-		maxSpeed=DRONE_MaxSpeed;
-		precision=DRONE_Precision;
-		steerAheadSimul=DRONE_SteerAheadSimul;
-		steerAheadPlan=DRONE_SteerAheadPlan;
-		predictTurnPlan=DRONE_PreductTurnPlan;
-		predictTurnSimul=DRONE_PredictTurnSimul;
-		liftForceCoef=DRONE_LiftForce;
-		cyclicAsideForceCoef=DRONE_CyclicAsideForce;
-		cyclicForwardForceCoef=DRONE_CyclicForwardForce;
-		bodyFrictionCoef=DRONE_BodyFriction;
-		backRotorForceCoef=DRONE_BackRotorForce;
-		fuelCapacity=DRONE_FuelCap;
-        mainRotorSpeed=DRONE_MainRotorSpeed;
-		backRotorSpeed=DRONE_BackRotorSpeed;
-		tailBladeVertical=DRONE_TailBladeVertical;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]=
-			{
-				
-				{
-					"damagehide",
-					0
-				},
-				
-				{
-					"rotorimpacthide",
-					0
-				},
-				
-				{
-					"tailrotorimpacthide",
-					0
-				},
-				
-				{
-					"propeller1_rotation",
-					0
-				},
-				
-				{
-					"propeller1_blur_rotation",
-					0
-				},
-				
-				{
-					"propeller2_rotation",
-					0
-				},
-				
-				{
-					"propeller2_blur_rotation",
-					0
-				},
-				
-				{
-					"propeller3_rotation",
-					0
-				},
-				
-				{
-					"propeller3_blur_rotation",
-					0
-				},
-				
-				{
-					"propeller4_rotation",
-					0
-				},
-				
-				{
-					"propeller4_blur_rotation",
-					0
-				},
-				
-				{
-					"propeller1_hide",
-					0
-				},
-				
-				{
-					"propeller1_blur_hide",
-					0
-				},
-				
-				{
-					"propeller2_hide",
-					0
-				},
-				
-				{
-					"propeller2_blur_hide",
-					0
-				},
-				
-				{
-					"propeller3_hide",
-					0
-				},
-				
-				{
-					"propeller3_blur_hide",
-					0
-				},
-				
-				{
-					"propeller4_hide",
-					0
-				},
-				
-				{
-					"propeller4_blur_hide",
-					0
-				},
-				
-				{
-					"mainturret",
-					0
-				},
-				
-				{
-					"maingun",
-					-0.050000001
-				}
-			};
-			hide[]=
-			{
-				"zasleh",
-				"tail rotor blur",
-				"main rotor blur",
-				"zadni svetlo",
-				"clan",
-				"podsvit pristroju",
-				"poskozeni"
-			};
-			verticalOffset=0.15000001;
-			verticalOffsetWorld=-0.001;
-			init="''";
-		};
-    };
-//Darter Drones
-    class BEN_B_UAV_01_F: BEN_UAV_01_base_F
-    {
-        author=AUTHOR;
-        displayName="AR-2 Darter (NLD)";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";
-		_generalMacro="B_UAV_01_F";
-		scope=2;
-        scopeCurator=2;
-		side=1;
-		accuracy=0.5;
-		faction="BLU_F";
-		crew="B_UAV_AI";
-		typicalCargo[]=
-		{
-			"B_UAV_AI"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"A3\Drones_F\Air_F_Gamma\UAV_01\Data\UAV_01_CO.paa"
-		};
-		textureList[]=
-		{
-			"Blufor",
-			1
-		};
-		class assembleInfo
-		{
-			primary=1;
-			base="";
-			assembleTo="";
-			displayName="";
-			dissasembleTo[]=
-			{
-				"BEN_B_UAV_01_backpack_F"
-			};
-		};
-    };
-    class BEN_O_UAV_01_F: BEN_UAV_01_base_F
-    {
-        author=AUTHOR;
-        displayName="AR-2 Darter (NLD)";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\O_UAV_01_F.jpg";
-		_generalMacro="O_UAV_01_F";
-		scope=2;
-        scopeCurator=2;
-		side=0;
-		accuracy=0.5;
-		faction="OPF_F";
-		crew="O_UAV_AI";
-		typicalCargo[]=
-		{
-			"O_UAV_AI"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"A3\Drones_F\Air_F_Gamma\UAV_01\Data\UAV_01_OPFOR_CO.paa"
-		};
-		textureList[]=
-		{
-			"Opfor",
-			1
-		};
-		class assembleInfo
-		{
-			primary=1;
-			base="";
-			assembleTo="";
-			displayName="";
-			dissasembleTo[]=
-			{
-				"BEN_O_UAV_01_backpack_F"
-			};
-		};
-    };
-    class BEN_I_UAV_01_F: BEN_UAV_01_base_F
-    {
-        author=AUTHOR;
-        displayName="AR-2 Darter (NLD)";
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\I_UAV_01_F.jpg";
-		_generalMacro="I_UAV_01_F";
-		scope=2;
-        scopeCurator=2;
-		side=2;
-		accuracy=0.5;
-		faction="IND_F";
-		crew="I_UAV_AI";
-		typicalCargo[]=
-		{
-			"I_Soldier_lite_F"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"A3\Drones_F\Air_F_Gamma\UAV_01\Data\UAV_01_INDP_CO.paa"
-		};
-		textureList[]=
-		{
-			"Indep",
-			1
-		};
-		class assembleInfo
-		{
-			primary=1;
-			base="";
-			assembleTo="";
-			displayName="";
-			dissasembleTo[]=
-			{
-				"BEN_I_UAV_01_backpack_F"
-			};
-		};
-    };
-
-//Darter Bags
-	class B_UAV_01_backpack_F;
-    class O_UAV_01_backpack_F;
-    class I_UAV_01_backpack_F;
-    class BEN_B_UAV_01_backpack_F: B_UAV_01_backpack_F
-    {
-        author="Brainless_Ben";
-        displayName="UAV Bag (AR-2) [NLD]";
-        class assembleInfo
-        {
-            base="";
-            displayName="AR-2 Darter (NLD)";
-            assembleTo="BEN_B_UAV_01_F";
-        };
-    };
-    class BEN_O_UAV_01_backpack_F: O_UAV_01_backpack_F
-    {
-        author="Brainless_Ben";
-        displayName="UAV Bag (AR-2) [NLD]";
-        class assembleInfo
-        {
-            base="";
-            displayName="AR-2 Darter (NLD)";
-            assembleTo="BEN_O_UAV_01_F";
-        };
-    };
-    class BEN_I_UAV_01_backpack_F: I_UAV_01_backpack_F
-    {
-        author="Brainless_Ben";
-        displayName="UAV Bag (AR-2) [NLD]";
-        class assembleInfo
-        {
-            base="";
-            displayName="AR-2 Darter (NLD)";
-            assembleTo="BEN_I_UAV_01_F";
-        };
-    };
-//Other Drones
-	#include "Drones\Crocus.hpp"
 };

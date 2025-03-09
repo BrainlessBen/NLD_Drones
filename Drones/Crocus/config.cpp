@@ -1,32 +1,68 @@
+#include "..\..\Defines.hpp"
+
+class cfgPatches 
+{
+    class NLD_Drones_Crocus
+    {
+        name=NAME;
+        author=AUTHOR;
+        url="https://github.com/BrainlessBen/NLD_Drones";
+        requiredVersion=REQVER;
+        requiredAddons[]=
+        {
+			"A3_Drones_F",
+			"ArmaFPV_Data",
+			"NLD_Drones"
+        };
+        units[]=
+        {
+			"BEN_B_Crocus_AT",
+			"BEN_B_Crocus_AP",
+			"BEN_O_Crocus_AT",
+			"BEN_O_Crocus_AP",
+			"BEN_I_Crocus_AT",
+			"BEN_I_Crocus_AP",
+			"BEN_B_Crocus_AT_Bag",
+			"BEN_B_Crocus_AP_Bag",
+			"BEN_O_Crocus_AT_Bag",
+			"BEN_O_Crocus_AP_Bag",
+			"BEN_I_Crocus_AT_Bag",
+			"BEN_I_Crocus_AP_Bag"
+        };
+		weapons[]={};
+    };
+};
+
+class cfgVehicles
+{
 //Crocus Base
 	class drone_base_F;
 	class BEN_CROCUS_base_F: drone_base_F
 	{
 		author=AUTHOR;
-        displayName="Crocus (NLD)";
-        accuracy=DRONE_Accuracy;
-		camouflage=DRONE_Camoflage;
-		audible=DRONE_Audible;
-		armor=DRONE_Armor;
-		cost=DRONE_Cost;
-		altFullForce=DRONE_AltFullForce;
-		altNoForce=DRONE_AltNoForce;
-        startDuration=DRONE_StartDuration;
-		maxSpeed=DRONE_MaxSpeed;
-		precision=DRONE_Precision;
-		steerAheadSimul=DRONE_SteerAheadSimul;
-		steerAheadPlan=DRONE_SteerAheadPlan;
-		predictTurnPlan=DRONE_PreductTurnPlan;
-		predictTurnSimul=DRONE_PredictTurnSimul;
-		liftForceCoef=DRONE_LiftForce;
-		cyclicAsideForceCoef=DRONE_CyclicAsideForce;
-		cyclicForwardForceCoef=DRONE_CyclicForwardForce;
-		bodyFrictionCoef=DRONE_BodyFriction;
-		backRotorForceCoef=DRONE_BackRotorForce;
-		fuelCapacity=DRONE_FuelCap;
-        mainRotorSpeed=DRONE_MainRotorSpeed;
-		backRotorSpeed=DRONE_BackRotorSpeed;
-		tailBladeVertical=DRONE_TailBladeVertical;
+        accuracy=Drone2_Accuracy;
+		camouflage=Drone2_Camoflage;
+		audible=Drone2_Audible;
+		armor=Drone2_Armor;
+		cost=Drone2_Cost;
+		altFullForce=Drone2_AltFullForce;
+		altNoForce=Drone2_AltNoForce;
+        startDuration=Drone2_StartDuration;
+		maxSpeed=Drone2_MaxSpeed;
+		precision=Drone2_Precision;
+		steerAheadSimul=Drone2_SteerAheadSimul;
+		steerAheadPlan=Drone2_SteerAheadPlan;
+		predictTurnPlan=Drone2_PreductTurnPlan;
+		predictTurnSimul=Drone2_PredictTurnSimul;
+		liftForceCoef=Drone2_LiftForce;
+		cyclicAsideForceCoef=Drone2_CyclicAsideForce;
+		cyclicForwardForceCoef=Drone2_CyclicForwardForce;
+		bodyFrictionCoef=Drone2_BodyFriction;
+		backRotorForceCoef=Drone2_BackRotorForce;
+		fuelCapacity=Drone2_FuelCap;
+        mainRotorSpeed=Drone2_MainRotorSpeed;
+		backRotorSpeed=Drone2_BackRotorSpeed;
+		tailBladeVertical=Drone2_TailBladeVertical;
 		class SimpleObject
 		{
 			eden=1;
@@ -153,6 +189,7 @@
 			init="''";
 		};
 	};
+
 //Crocus Drones
 	class BEN_B_Crocus_AT: BEN_CROCUS_base_F
 	{
@@ -160,6 +197,7 @@
 		displayName="Crocus AT (NLD)";
 		editorPreview="\ArmaFPV\data\krokus1.jpg";
 		model="\ArmaFPV\drone.p3d";
+        _generalMacro="B_UAV_01_F";
 		scope=2;
         scopeCurator=2;
 		side=1;
@@ -172,8 +210,8 @@
 		};
 		class assembleInfo
 		{
-			primary=0;
 			base="";
+			primary=1;
 			assembleTo="";
 			displayName="";
 			dissasembleTo[]=
@@ -185,8 +223,8 @@
 		{
 			class ArmaFPV
 			{
-				hit="_this call BEN_fnc_fpv_onDestroy";
-				init="(_this # 0) spawn BEN_fnc_fpv_droneInit;";
+				hit="_this call BEN_fnc_onDestroy";
+				init="(_this # 0) spawn BEN_fnc_droneInit;";
 			};
 		};
 	};
@@ -222,8 +260,8 @@
 		};
 		class assembleInfo
 		{
-			primary=0;
 			base="";
+			primary=1;
 			assembleTo="";
 			displayName="";
 			dissasembleTo[]=
@@ -235,8 +273,8 @@
 		{
 			class ArmaFPV
 			{
-				hit="_this call BEN_fnc_fpv_onDestroy";
-				init="(_this # 0) spawn BEN_fnc_fpv_droneInit;";
+				hit="_this call BEN_fnc_onDestroy";
+				init="(_this # 0) spawn BEN_fnc_droneInit;";
 			};
 		};
 	};
@@ -272,8 +310,8 @@
 		};
 		class assembleInfo
 		{
-			primary=0;
 			base="";
+			primary=1;
 			assembleTo="";
 			displayName="";
 			dissasembleTo[]=
@@ -285,8 +323,8 @@
 		{
 			class ArmaFPV
 			{
-				hit="_this call BEN_fnc_fpv_onDestroy";
-				init="(_this # 0) spawn BEN_fnc_fpv_droneInit;";
+				hit="_this call BEN_fnc_onDestroy";
+				init="(_this # 0) spawn BEN_fnc_droneInit;";
 			};
 		};
 	};
@@ -306,69 +344,79 @@
 	};
 
 //Crocus Bags
+	class BEN_B_UAV_01_backpack_F;
+	class BEN_O_UAV_01_backpack_F;
+	class BEN_I_UAV_01_backpack_F;
 	class BEN_B_Crocus_AT_Bag: BEN_B_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AT) [NLD]";
-        class assembleInfo: assembleInfo
+        class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AT (NLD)";
             assembleTo="BEN_B_Crocus_AT";
         };
 	};
-	class BEN_B_Crocus_AP_Bag: BEN_B_Crocus_AT_Bag
+	class BEN_B_Crocus_AP_Bag: BEN_B_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AP) [NLD]";
-        class assembleInfo: assembleInfo
+        class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AP (NLD)";
             assembleTo="BEN_B_Crocus_AP";
         };
 	};
 	class BEN_O_Crocus_AT_Bag: BEN_O_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AT) [NLD]";
-		class assembleInfo: assembleInfo
+		class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AT (NLD)";
             assembleTo="BEN_O_Crocus_AT";
         };
 	};
-	class BEN_O_Crocus_AP_Bag: BEN_O_Crocus_AT_Bag
+	class BEN_O_Crocus_AP_Bag: BEN_O_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AP) [NLD]";
-		class assembleInfo: assembleInfo
+		class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AP (NLD)";
             assembleTo="BEN_O_Crocus_AP";
         };
 	};
 	class BEN_I_Crocus_AT_Bag: BEN_I_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AT) [NLD]";
-		class assembleInfo: assembleInfo
+		class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AT (NLD)";
             assembleTo="BEN_I_Crocus_AT";
         };
 	};
-	class BEN_I_Crocus_AP_Bag: BEN_I_Crocus_AT_Bag
+	class BEN_I_Crocus_AP_Bag: BEN_I_UAV_01_backpack_F
 	{
+		author=AUTHOR;
 		displayName="UAV Bag (Crocus AP) [NLD]";
-		class assembleInfo: assembleInfo
+		class assembleInfo
         {
             base="";
-			primary=1;
+			primary=0;
             displayName="Crocus AP (NLD)";
             assembleTo="BEN_I_Crocus_AP";
         };
 	};
+};
