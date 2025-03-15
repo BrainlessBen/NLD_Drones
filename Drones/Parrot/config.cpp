@@ -57,16 +57,10 @@ class cfgVehicles
         author=AUTHOR;
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
         picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
-        accuracy=Drone1_Accuracy;
-		camouflage=Drone1_Camoflage;
-		audible=Drone1_Audible;
-		armor=Drone1_Armor;
-		cost=Drone1_Cost;
 		altFullForce=Drone1_AltFullForce;
 		altNoForce=Drone1_AltNoForce;
         startDuration=Drone1_StartDuration;
 		maxSpeed=Drone1_MaxSpeed;
-		precision=Drone1_Precision;
 		steerAheadSimul=Drone1_SteerAheadSimul;
 		steerAheadPlan=Drone1_SteerAheadPlan;
 		predictTurnPlan=Drone1_PreductTurnPlan;
@@ -191,6 +185,7 @@ class cfgVehicles
     class BEN_B_Parrot_ANAFI: BEN_Parrot_Base_F
     {
         author=AUTHOR;
+        accuracy=0.5;
         displayName="Parrot ANAFI (NLD)";
         editorPreview="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot.jpg";
         model="\NLD_Drones\Drones\Parrot\UAV_01_parrot.p3d";
@@ -199,7 +194,6 @@ class cfgVehicles
         scopeCurator=2;
         scopeArsenal=2;
         side=1;
-        accuracy=0.5;
         faction="BLU_F";
         crew="B_UAV_AI";
         typicalCargo[]=
@@ -261,7 +255,6 @@ class cfgVehicles
     {
         author=AUTHOR;
         side=2;
-		accuracy=0.5;
 		faction="IND_F";
 		crew="I_UAV_AI";
 		typicalCargo[]=
@@ -276,56 +269,38 @@ class cfgVehicles
     };
 
 //Parrot Items
-    class Item_ToolKit;
-    class Item_BEN_Parrot_ANAFI_Folded: Item_ToolKit
+    class Item_Base_F;
+    class Item_BEN_Parrot_ANAFI_Folded: Item_Base_F
     {
         author=AUTHOR;
         scope=2;
         scopeCurator=2;
         displayName="Parrot ANAFI Folded (NLD)";
+        editorCategory=BEN_Catergorie;
+		editorSubcategory=BEN_SubCatParrot;
         model="\NLD_Drones\Drones\Parrot\UAV_01_parrot_folded.p3d";
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
         picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
-        editorCategory=BEN_Catergorie;
-		editorSubcategory=BEN_SubCatParrot;
-        editorPreview="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot.jpg";
+        class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+        maximumload=0;
+        transportMaxBackpacks=0;
+        transportMaxMagazines=0;
+        transportMaxWeapons=0;
+        transportMaxItems=1;
         class TransportItems
         {
             class BEN_Parrot_ANAFI_Folded
             {
                 name="BEN_Parrot_ANAFI_Folded";
                 count=1;
-            };
-        };
-        class UserActions
-        {
-            class Drone_Pickup
-            {
-                userActionID=53;
-                displayName="Pickup Parrot ANAFI (NLD)";
-                displayNameDefault="<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Assemble Parrot ANAFI (NLD)</t>";
-                condition="alive this";
-                statement="[player,this] call BEN_fnc_pickup";
-                position="";
-                priority=1;
-                radius=1.8;
-                animPeriod=2;
-                onlyForplayer=1;
-                showWindow=0;
-            };
-            class Drone_Deploy
-            {
-                userActionID=54;
-                displayName="Deploy Parrot ANAFI (NLD)";
-                displayNameDefault="<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Assemble Parrot ANAFI (NLD)</t>";
-                condition="this in attachedObject player";
-                statement="[player,this] call BEN_fnc_deploy";
-                position="";
-                priority=1;
-                radius=1.8;
-                animPeriod=2;
-                onlyForplayer=1;
-                showWindow=0;
             };
         };
     };
@@ -341,13 +316,13 @@ class cfgWeapons
         displayName="Parrot ANAFI Folded (NLD)";
         model="\NLD_Drones\Drones\Parrot\UAV_01_parrot_folded.p3d";
         scope=2;
-        scopeArsenal=2;
 		scopeCurator=2;
+        scopeArsenal=2;
         picture="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
-        descriptionShort="Inventory item for drone";
+        descriptionShort = "Inventory item<br/>Douple click on the item to access menu";
         class ItemInfo: InventoryItem_Base_F
         {
-            mass=30;
+            mass=20;
             scope=0;
             type=620;
         };

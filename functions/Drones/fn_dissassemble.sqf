@@ -12,7 +12,7 @@
 	2: Type (className) <String> 
 */
 
-if !(hasInterface) exitWith {};
+if !(isServer) exitWith {};
 
 private ["_pos","_anim","_new"];
 params [
@@ -23,9 +23,6 @@ params [
 
 if (isNull _drone OR _type isEqualTo "") exitWith {false};
 
-_pos = getPosATL _drone;
-deleteVehicle _drone;
-
 _anim = if (stance player == "STAND") then 
 {
 	"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"
@@ -35,6 +32,8 @@ _anim = if (stance player == "STAND") then
 };
 [player,_anim] remoteExec ["switchMove",0];
 
+_pos = getPosATL _drone;
+deleteVehicle _drone;
 _new = createVehicle [_type, _pos, [], 0, "CAN_COLLIDE"];
 
 [_unit,_new] call BEN_fnc_pickup;

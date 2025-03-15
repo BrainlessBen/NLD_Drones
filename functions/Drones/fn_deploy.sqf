@@ -11,17 +11,17 @@
 	2: Source <Object>
 */
 
-if !(hasInterface) exitWith {};
+if !(isServer) exitWith {};
 
-private ["_vehType","_dir","_anim","_uav"];
+private ["_checkItem","_vehType","_uav","_anim"];
 params[
 	["_unit",objNull,[objNull]],
-	["_drone",objNull,[objNull]]
+	["_drone",objNull,[objNull]],
+	["_item","",[""]]
 ];
 
-if (isNull _drone) exitWith {false};
-
-_vehType = switch (typeOf _drone) do 
+_checkItem = if (_item == "") then {typeOf _drone} else {_item};
+_vehType = switch (_checkItem) do 
 {
 	case "Item_BEN_Parrot_ANAFI_Folded":
 	{
@@ -43,6 +43,19 @@ _vehType = switch (typeOf _drone) do
 	};
 };
 
+_uav = createVehicle [_vehType, _unit getRelPos [1,0], [], 0, "CAN_COLLIDE"];
+createVehicleCrew _uav;
+
+if (isNull _drone) then 
+{
+	_unit removeItem _item;
+	closeDialog 602;
+}else
+{
+	detach _drone;
+	deleteVehicle _drone;
+};
+
 _anim = if (stance _unit == "STAND") then 
 {
 	"AinvPercMstpSrasWrflDnon_Putdown_AmovPercMstpSrasWrflDnon"
@@ -51,13 +64,5 @@ _anim = if (stance _unit == "STAND") then
 	"AinvPknlMstpSrasWrflDnon_Putdown_AmovPknlMstpSrasWrflDnon"
 };
 [_unit, _anim] remoteExec ["switchMove",0];
-
-_dir = _unit getDir _drone;
-detach _drone;
-deleteVehicle _drone;
-
-_uav = createVehicle [_vehType, getPos _unit, [], 0, "CAN_COLLIDE"];
-createVehicleCrew _uav;
-_uav setDir _dir;
 
 true;

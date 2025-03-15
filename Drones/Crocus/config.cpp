@@ -40,16 +40,10 @@ class cfgVehicles
 	class BEN_CROCUS_base_F: drone_base_F
 	{
 		author=AUTHOR;
-        accuracy=Drone2_Accuracy;
-		camouflage=Drone2_Camoflage;
-		audible=Drone2_Audible;
-		armor=Drone2_Armor;
-		cost=Drone2_Cost;
 		altFullForce=Drone2_AltFullForce;
 		altNoForce=Drone2_AltNoForce;
         startDuration=Drone2_StartDuration;
 		maxSpeed=Drone2_MaxSpeed;
-		precision=Drone2_Precision;
 		steerAheadSimul=Drone2_SteerAheadSimul;
 		steerAheadPlan=Drone2_SteerAheadPlan;
 		predictTurnPlan=Drone2_PreductTurnPlan;

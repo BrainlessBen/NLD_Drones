@@ -11,7 +11,7 @@
 	2: Source <Object>
 */
 
-if !(hasInterface) exitWith {};
+if !(isServer) exitWith {};
 
 private ["_vehType","_conDir","_conAngle","_conPitch"];
 params[
@@ -19,9 +19,7 @@ params[
 	["_drone",objNull,[objNull]]
 ];
 
-if (isNull _drone) exitWith {false};
-
-if !(([(typeOf _drone),5] call BIS_fnc_trimString) in (attachedObjects _unit)) exitWith 
+if ({typeOf _x == 'Item_BEN_Parrot_ANAFI_Folded'} count (attachedObjects _unit) == 1) exitWith 
 {
 	hintSilent "Drone already attached";
 	false;

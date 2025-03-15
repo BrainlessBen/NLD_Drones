@@ -28,6 +28,10 @@ class CfgFunctions
 			class dissassemble{};
 			class pickup{};
 			class deploy{};
+			class droneInit
+			{
+				postInit=1;
+			};
 		};
 		class FPV
 		{
