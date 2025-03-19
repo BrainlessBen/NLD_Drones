@@ -14,7 +14,7 @@
     "FPV Settings (NLD)",
     true,
     1,
-    { publicVariable "FPV_isUavCaptive" }
+    { publicVariable "FPV_isUavCaptive_NLD" }
 ] call cba_settings_fnc_init;
 
 [
@@ -24,5 +24,5 @@
     "FPV Settings (NLD)", 
     [1500, 12000, 1500, 0],
     1,
-    { publicVariable "FPV_MaxFlightDistance" }
+    { publicVariable "FPV_MaxFlightDistance_NLD" }
 ] call cba_settings_fnc_init;

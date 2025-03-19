@@ -76,3 +76,11 @@ class CfgEditorSubcategories
 		displayName="Raven";
 	};
 };
+
+class Extended_PreInit_EventHandlers
+{
+	class BEN_preInit
+	{
+		init="call compile preProcessFileLineNumbers '\NLD_Drones\XEH_preInit.sqf'";
+	};
+};

@@ -54,7 +54,7 @@ private _retranslatorsNearPlayer = [_player, 1500] call _fnc_findRetranslators;
 
 private _jammersNearUAV = [_uav, 1000] call _fnc_findJammers;
 
-private _maxDistance = if (count _retranslatorsNearUAV > 0 || count _retranslatorsNearPlayer > 0) then { FPV_MaxFlightDistance + 2500 } else { FPV_MaxFlightDistance };
+private _maxDistance = if (count _retranslatorsNearUAV > 0 || count _retranslatorsNearPlayer > 0) then { FPV_MaxFlightDistance_NLD + 2500 } else { FPV_MaxFlightDistance_NLD };
 
 private _terrainInterception = [_player, _uav] call _fnc_evaluateTerrainImpact;
 private _objectCount = [_player, _uav] call _fnc_countInterferingObjects;
