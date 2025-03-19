@@ -50,9 +50,9 @@ class cfgPatches
 class cfgVehicles
 {
 //Parrot Base
-    class UAV_01_base_F;
+    //class UAV_01_base_F;
     class BEN_UAV_01_base_F;
-    class BEN_Parrot_Base_F: UAV_01_base_F
+    class BEN_Parrot_Base_F: BEN_UAV_01_base_F
     {
         author=AUTHOR;
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
@@ -66,6 +66,10 @@ class cfgVehicles
 		predictTurnPlan=Drone1_PreductTurnPlan;
 		predictTurnSimul=Drone1_PredictTurnSimul;
 		liftForceCoef=Drone1_LiftForce;
+		maxFordingDepth=0.001;
+		maxMainRotorDive=0;
+		minMainRotorDive=0;
+		neutralMainRotorDive=0;
 		cyclicAsideForceCoef=Drone1_CyclicAsideForce;
 		cyclicForwardForceCoef=Drone1_CyclicForwardForce;
 		bodyFrictionCoef=Drone1_BodyFriction;
@@ -73,7 +77,9 @@ class cfgVehicles
 		fuelCapacity=Drone1_FuelCap;
         mainRotorSpeed=Drone1_MainRotorSpeed;
 		backRotorSpeed=Drone1_BackRotorSpeed;
+		tailBladeRadius=Drone1_TailBladeRadius;
 		tailBladeVertical=Drone1_TailBladeVertical;
+		enableManualFire=0;
 		class SimpleObject
 		{
 			eden=1;

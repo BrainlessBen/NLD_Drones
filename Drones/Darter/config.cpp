@@ -50,6 +50,7 @@ class cfgVehicles
 		fuelCapacity=Drone2_FuelCap;
         mainRotorSpeed=Drone2_MainRotorSpeed;
 		backRotorSpeed=Drone2_BackRotorSpeed;
+		tailBladeRadius=Drone2_TailBladeRadius;
 		tailBladeVertical=Drone2_TailBladeVertical;
 		class SimpleObject
 		{
