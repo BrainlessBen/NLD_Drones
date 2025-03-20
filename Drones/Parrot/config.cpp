@@ -66,10 +66,6 @@ class cfgVehicles
 		predictTurnPlan=Drone1_PreductTurnPlan;
 		predictTurnSimul=Drone1_PredictTurnSimul;
 		liftForceCoef=Drone1_LiftForce;
-		maxFordingDepth=0.001;
-		maxMainRotorDive=0;
-		minMainRotorDive=0;
-		neutralMainRotorDive=0;
 		cyclicAsideForceCoef=Drone1_CyclicAsideForce;
 		cyclicForwardForceCoef=Drone1_CyclicForwardForce;
 		bodyFrictionCoef=Drone1_BodyFriction;

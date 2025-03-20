@@ -11,19 +11,19 @@
 
 /*
 default settings
-    maxSpeed=100;
+    maxSpeed=100;               ()
     fuelCapacity=100;
-    liftForceCoef=1;
+    liftForceCoef=1;            (Lift)
     startDuration=3;
     bodyFrictionCoef=0.30000001;
-    altFullForce=1000;
-    altNoForce=2000;
-    steerAheadSimul=0.5;
-    steerAheadPlan=0.69999999;
-    predictTurnSimul=1.5;
-    predictTurnPlan=2;
-    cyclicAsideForceCoef=2;
-    cyclicForwardForceCoef=1.2;
+    altFullForce=1000;          (Hight)
+    altNoForce=2000;            (Hight)
+    steerAheadSimul=0.5;        (A/D "Yaw")
+    steerAheadPlan=0.69999999;  (A/D "Yaw")
+    predictTurnSimul=1.5;       (Mouse Side to Side "Roll")
+    predictTurnPlan=2;          (Mouse Side to Side "Roll")
+    cyclicAsideForceCoef=2;     (Mouse Up/Down "Pitch") ? (Mouse Side to Side "Roll")
+    cyclicForwardForceCoef=1.2; (Mouse Up/Down "Pitch")
     backRotorForceCoef=5;
     mainRotorSpeed=-7;
     backRotorSpeed=7;
@@ -33,21 +33,21 @@ default settings
 //Drone1 settings
 #define Drone1_MaxSpeed 50
 #define Drone1_FuelCap 5
-#define Drone1_LiftForce 1.5
-#define Drone1_StartDuration 0.5
-#define Drone1_BodyFriction 0.3
-#define Drone1_AltFullForce 1000
-#define Drone1_AltNoForce 2000
-#define Drone1_SteerAheadSimul 0.1
-#define Drone1_SteerAheadPlan 0.4
-#define Drone1_PredictTurnSimul 0.3
-#define Drone1_PreductTurnPlan 0.3
-#define Drone1_CyclicAsideForce 0.4
-#define Drone1_CyclicForwardForce 0.4
-#define Drone1_BackRotorForce 1
-#define Drone1_MainRotorSpeed -5
-#define Drone1_BackRotorSpeed 5
-#define Drone1_TailBladeRadius 0.25
+#define Drone1_LiftForce 3
+#define Drone1_StartDuration 0.25
+#define Drone1_BodyFriction 1
+#define Drone1_AltFullForce 250
+#define Drone1_AltNoForce 500
+#define Drone1_SteerAheadSimul 0.2
+#define Drone1_SteerAheadPlan 0.2
+#define Drone1_PredictTurnSimul 0.2
+#define Drone1_PreductTurnPlan 0.2
+#define Drone1_CyclicAsideForce 0.2
+#define Drone1_CyclicForwardForce 0.1
+#define Drone1_BackRotorForce 0
+#define Drone1_MainRotorSpeed -4
+#define Drone1_BackRotorSpeed 4
+#define Drone1_TailBladeRadius 0.5
 #define Drone1_TailBladeVertical 0
 
 //Drone2 settings
