@@ -33,7 +33,7 @@ class cfgPatches
         requiredAddons[]=
         {
 			"A3_Drones_F",
-			"NLD_Drones"
+			"ArmaFPV_Data"
         };
         units[]=
         {
@@ -50,31 +50,34 @@ class cfgPatches
 class cfgVehicles
 {
 //Parrot Base
-    //class UAV_01_base_F;
     class BEN_UAV_01_base_F;
     class BEN_Parrot_Base_F: BEN_UAV_01_base_F
     {
         author=AUTHOR;
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
         picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
+		maxSpeed=Drone1_MaxSpeed;
+		fuelCapacity=Drone1_FuelCap;
+		liftForceCoef=Drone1_LiftForce;
+        startDuration=Drone1_StartDuration;
+		bodyFrictionCoef=Drone1_BodyFriction;
 		altFullForce=Drone1_AltFullForce;
 		altNoForce=Drone1_AltNoForce;
-        startDuration=Drone1_StartDuration;
-		maxSpeed=Drone1_MaxSpeed;
 		steerAheadSimul=Drone1_SteerAheadSimul;
 		steerAheadPlan=Drone1_SteerAheadPlan;
 		predictTurnPlan=Drone1_PreductTurnPlan;
 		predictTurnSimul=Drone1_PredictTurnSimul;
-		liftForceCoef=Drone1_LiftForce;
 		cyclicAsideForceCoef=Drone1_CyclicAsideForce;
 		cyclicForwardForceCoef=Drone1_CyclicForwardForce;
-		bodyFrictionCoef=Drone1_BodyFriction;
 		backRotorForceCoef=Drone1_BackRotorForce;
-		fuelCapacity=Drone1_FuelCap;
         mainRotorSpeed=Drone1_MainRotorSpeed;
 		backRotorSpeed=Drone1_BackRotorSpeed;
 		tailBladeRadius=Drone1_TailBladeRadius;
 		tailBladeVertical=Drone1_TailBladeVertical;
+		radarTargetSize=0.025;
+		visualTargetSize=0.025;
+		formationX=4;
+		formationZ=4;
 		enableManualFire=0;
 		class SimpleObject
 		{
@@ -223,7 +226,6 @@ class cfgVehicles
         {
             class Drone_Dissassemble
             {
-                userActionID=52;
                 displayName="Dissassemble Parrot ANAFI (NLD)";
                 displayNameDefault="<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Dissassemble Parrot ANAFI (NLD)</t>";
                 condition="alive this && vehicle player == player && ((UAVControl this) select 1 isEqualto '')";

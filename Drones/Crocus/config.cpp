@@ -11,8 +11,7 @@ class cfgPatches
         requiredAddons[]=
         {
 			"A3_Drones_F",
-			"ArmaFPV_Data",
-			"NLD_Drones"
+			"ArmaFPV_Data"
         };
         units[]=
         {
