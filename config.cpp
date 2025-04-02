@@ -30,7 +30,7 @@ class CfgFunctions
 			class deploy{};
 			class droneInit
 			{
-				preStart=1;
+				postInit=1;
 			};
 		};
 		class FPV
@@ -50,6 +50,13 @@ class CfgFunctions
 			{
 				postInit=1;
 			};
+		};
+		class MissionParams
+		{
+			file="\NLD_Drones\functions\Mission";
+			class setWeather {};
+			class setTime {};
+			class setFog {};
 		};
 	};
 };
