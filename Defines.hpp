@@ -35,7 +35,7 @@ default settings
 #define Drone1_FuelCap 5
 #define Drone1_LiftForce 8
 #define Drone1_StartDuration 1
-#define Drone1_BodyFriction 2
+#define Drone1_BodyFriction 1
 #define Drone1_AltFullForce 500
 #define Drone1_AltNoForce 1000
 #define Drone1_SteerAheadSimul 0.5
