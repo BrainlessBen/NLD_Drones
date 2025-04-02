@@ -30,7 +30,7 @@ class CfgFunctions
 			class deploy{};
 			class droneInit
 			{
-				postInit=1;
+				preStart=1;
 			};
 		};
 		class FPV

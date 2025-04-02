@@ -20,9 +20,10 @@ if !(isServer) exitWith {};
 	false,[]
 ] call CBA_fnc_addItemContextMenuOption;
 
+if (hasInterface) then 
 {
 	//Action to pickup and attach drone to player pelvis
-	_x addAction 
+	player addAction
 	[
 		"Pickup Parrot ANAFI (NLD)",
 		{
@@ -34,7 +35,7 @@ if !(isServer) exitWith {};
 	];
 
 	//Action to deploy drone that is attached to player
-	_x addAction
+	player addAction
 	[
 		"Deploy Parrot ANAFI (NLD)", 
 		{ 
@@ -51,7 +52,7 @@ if !(isServer) exitWith {};
 	];
 
 	//EventHandler to convert GroundWeaponHolder to Item_BEN_Parrot_ANAFI_Folded
-	_x addEventHandler
+	player addEventHandler
 	[
 		"InventoryClosed",
 		{
@@ -62,9 +63,9 @@ if !(isServer) exitWith {};
 				{
 					_pos = getPosATL _container;
 					deleteVehicle _container;
-					_new = createVehicle ["Item_BEN_Parrot_ANAFI_Folded", _pos, [], 0, "CAN_COLLIDE"];
+					createVehicle ["Item_BEN_Parrot_ANAFI_Folded", _pos, [], 0, "CAN_COLLIDE"];
 				};
 			};
 		}
 	];
-}forEach allPlayers;
+};

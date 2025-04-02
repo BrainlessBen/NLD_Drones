@@ -22,7 +22,7 @@
     "SLIDER",   
     ["Max Flight Distance", ""], 
     "FPV Settings (NLD)", 
-    [1500, 12000, 1500, 0],
+    [4000, 12000, 1500, 0],
     1,
     { publicVariable "FPV_MaxFlightDistance_NLD" }
 ] call cba_settings_fnc_init;
