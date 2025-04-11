@@ -56,6 +56,22 @@ class cfgVehicles
         author=AUTHOR;
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
         picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
+		class RotorLibHelicopterProperties
+		{
+			RTDconfig="A3\Air_F_Heli\Heli_Transport_03\RTD_Heli_Transport_03.xml";
+			autoHoverCorrection[]={0,0,0};				//{6.5,0,0}
+			defaultCollective=0.0; 						//0.60500002
+			retreatBladeStallWarningSpeed=92.583;
+			maxTorque=1000;								//4032
+			stressDamagePerSec=0.0033333332;
+			maxHorizontalStabilizerLeftStress=1000;		//10000
+			maxHorizontalStabilizerRightStress=1000;	//10000
+			maxVerticalStabilizerStress=1000;			//10000
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=3500;					//350000
+			maxTailRotorStress=3500;					//350000
+		};
 		maxSpeed=Drone1_MaxSpeed;
 		fuelCapacity=Drone1_FuelCap;
 		liftForceCoef=Drone1_LiftForce;
