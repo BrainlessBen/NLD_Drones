@@ -32,7 +32,7 @@ default settings
 
 //Drone1 settings
 #define Drone1_MaxSpeed 100
-#define Drone1_FuelCap 5
+#define Drone1_FuelCap 15
 #define Drone1_LiftForce 6
 #define Drone1_StartDuration 1
 #define Drone1_BodyFriction 0.5
