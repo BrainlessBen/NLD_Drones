@@ -60,17 +60,17 @@ class cfgVehicles
 		{
 			RTDconfig="A3\Air_F_Heli\Heli_Transport_03\RTD_Heli_Transport_03.xml";
 			autoHoverCorrection[]={0,0,0};				//{6.5,0,0}
-			defaultCollective=0.0; 						//0.60500002
+			defaultCollective=0.6; 						//0.60500002
 			retreatBladeStallWarningSpeed=92.583;
-			maxTorque=1000;								//4032
+			maxTorque=4032;								//4032
 			stressDamagePerSec=0.0033333332;
 			maxHorizontalStabilizerLeftStress=1000;		//10000
 			maxHorizontalStabilizerRightStress=1000;	//10000
 			maxVerticalStabilizerStress=1000;			//10000
 			horizontalWingsAngleCollMin=0;
 			horizontalWingsAngleCollMax=0;
-			maxMainRotorStress=3500;					//350000
-			maxTailRotorStress=3500;					//350000
+			maxMainRotorStress=35000;					//350000
+			maxTailRotorStress=35000;					//350000
 		};
 		maxSpeed=Drone1_MaxSpeed;
 		fuelCapacity=Drone1_FuelCap;
@@ -199,6 +199,80 @@ class cfgVehicles
 			verticalOffset=0.15000001;
 			verticalOffsetWorld=-0.001;
 			init="''";
+		};
+		class Sounds
+		{
+			class Engine
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\quad_engine_full_01",
+					0.25118864,
+					1,
+					200
+				};
+				frequency="rotorSpeed";
+				volume="camPos*((rotorSpeed-0.72)*4)";
+			};
+			class RotorLowOut
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\blade",
+					0.25118864,
+					1,
+					200
+				};
+				frequency="rotorSpeed";
+				volume="camPos*(0 max (rotorSpeed-0.1))";
+				cone[]={1.6,3.1400001,1.6,0.94999999};
+			};
+			class RotorHighOut
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\blade_high",
+					0.25118864,
+					1,
+					250
+				};
+				frequency="rotorSpeed";
+				volume="camPos*10*(0 max (rotorThrust-0.9))";
+				cone[]={1.6,3.1400001,1.6,0.94999999};
+			};
+			class EngineIn
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\quad_engine_full_int",
+					0.25118864,
+					1
+				};
+				frequency="rotorSpeed";
+				volume="(1-camPos)*((rotorSpeed-0.75)*4)";
+			};
+			class RotorLowIn
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\blade_int",
+					0.25118864,
+					1
+				};
+				frequency="rotorSpeed";
+				volume="(1-camPos)*(0 max (rotorSpeed-0.1))";
+			};
+			class RotorHighIn
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\air\Uav_01\blade_high_int",
+					0.25118864,
+					1
+				};
+				frequency="rotorSpeed";
+				volume="(1-camPos)*3*(rotorThrust-0.9)";
+			};
 		};
     };
 
