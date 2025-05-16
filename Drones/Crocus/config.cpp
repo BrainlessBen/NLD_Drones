@@ -185,7 +185,7 @@ class cfgVehicles
 	};
 
 //Crocus Drones
-	class BEN_B_Crocus_AT: BEN_CROCUS_base_F
+	class BEN_B_Crocus_AP: BEN_CROCUS_base_F
 	{
 		author=AUTHOR;
 		displayName="Crocus AT (NLD)";
@@ -210,7 +210,7 @@ class cfgVehicles
 			displayName="";
 			dissasembleTo[]=
 			{
-				"BEN_B_Crocus_AT_Bag"
+				"BEN_B_Crocus_AP_Bag"
 			};
 		};
 		class EventHandlers
@@ -222,7 +222,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class BEN_B_Crocus_AP: BEN_B_Crocus_AT
+	class BEN_B_Crocus_AT: BEN_B_Crocus_AP
 	{
 		author=AUTHOR;
 		displayName="Crocus AP (NLD)";
@@ -232,11 +232,11 @@ class cfgVehicles
 		{
 			dissasembleTo[]=
 			{
-				"BEN_B_Crocus_AP_Bag"
+				"BEN_B_Crocus_AT_Bag"
 			};
 		};
 	};
-	class BEN_O_Crocus_AT: BEN_CROCUS_base_F
+	class BEN_O_Crocus_AP: BEN_CROCUS_base_F
 	{
 		author=AUTHOR;
 		displayName="Crocus AT (NLD)";
@@ -260,7 +260,7 @@ class cfgVehicles
 			displayName="";
 			dissasembleTo[]=
 			{
-				"BEN_O_Crocus_AT_Bag"
+				"BEN_O_Crocus_AP_Bag"
 			};
 		};
 		class EventHandlers
@@ -272,7 +272,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class BEN_O_Crocus_AP: BEN_O_Crocus_AT
+	class BEN_O_Crocus_AT: BEN_O_Crocus_AP
 	{
 		author=AUTHOR;
 		displayName="Crocus AP (NLD)";
@@ -282,11 +282,11 @@ class cfgVehicles
 		{
 			dissasembleTo[]=
 			{
-				"BEN_O_Crocus_AP_Bag"
+				"BEN_O_Crocus_AT_Bag"
 			};
 		};
 	};
-	class BEN_I_Crocus_AT: BEN_CROCUS_base_F
+	class BEN_I_Crocus_AP: BEN_CROCUS_base_F
 	{
 		author=AUTHOR;
 		displayName="Crocus AT (NLD)";
@@ -310,7 +310,7 @@ class cfgVehicles
 			displayName="";
 			dissasembleTo[]=
 			{
-				"BEN_I_Crocus_AT_Bag"
+				"BEN_I_Crocus_AP_Bag"
 			};
 		};
 		class EventHandlers
@@ -322,7 +322,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class BEN_I_Crocus_AP: BEN_I_Crocus_AT
+	class BEN_I_Crocus_AT: BEN_I_Crocus_AP
 	{
 		author=AUTHOR;
 		displayName="Crocus AP (NLD)";
@@ -332,7 +332,7 @@ class cfgVehicles
 		{
 			dissasembleTo[]=
 			{
-				"BEN_I_Crocus_AP_Bag"
+				"BEN_I_Crocus_AT_Bag"
 			};
 		};
 	};
