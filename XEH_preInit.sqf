@@ -3,7 +3,7 @@
     "EDITBOX",
     ["Default Text", "Enter the text"],
     "FPV Settings (NLD)",
-    "CROCUS",
+    "",
     0
 ] call cba_settings_fnc_init;
 

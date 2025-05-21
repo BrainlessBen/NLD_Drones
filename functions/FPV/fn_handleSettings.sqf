@@ -1,13 +1,13 @@
 private _player = missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player];
-private _mainText = uiNameSpace getVariable ["ArmaFPV_MainText", controlNull]; 
-private _defaultText = missionNamespace getVariable ["FPV_DefaultText_NLD", "CROCUS"]; 
+private _mainText = uiNameSpace getVariable ["ArmaFPV_MainText", controlNull];
+private _defaultText = missionNamespace getVariable ["FPV_DefaultText_NLD", ""];
 private _isCaptive = missionNamespace getVariable ["FPV_isUavCaptive_NLD", true];
-private _textArray = toArray _defaultText; 
-private _allowedChars = toArray "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,;\/ "; 
+private _textArray = toArray _defaultText;
+private _allowedChars = toArray "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,;\/ ";
 
-private _isValid = true; 
+private _isValid = true;
 { 
-    if !(_x in _allowedChars) exitWith { _isValid = false; }; 
+    if !(_x in _allowedChars) exitWith { _isValid = false; };
 } forEach _textArray; 
 
 if (_isValid) then { 
