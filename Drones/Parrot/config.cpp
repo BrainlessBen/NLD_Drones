@@ -9,16 +9,6 @@
     - Hand-launch
     - Hand landing
     - Follows the user from up to 30 m away.
-
-Move Erect/Kneel/Prone
-    AwopPercMstpSoptWbinDnon_AmovPercMstpSnonWnonDnon
-    AwopPercMstpSoptWbinDnon_AmovPercMstpSnonWnonDnon_end
-
-    AwopPknlMstpSoptWbinDnon_AmovPknlMstpSnonWnonDnon
-    AwopPknlMstpSoptWbinDnon_AmovPknlMstpSnonWnonDnon_end
-
-    AwopPpneMstpSoptWbinDnon_AmovPpneMstpSnonWnonDnon
-    AwopPpneMstpSoptWbinDnon_AmovPpneMstpSnonWnonDnon_end
 */
 #include "..\..\Defines.hpp"
 

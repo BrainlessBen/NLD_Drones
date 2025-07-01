@@ -40,8 +40,8 @@ default settings
 #define Drone1_AltNoForce 1000
 #define Drone1_SteerAheadSimul 0.2
 #define Drone1_SteerAheadPlan 0.2
-#define Drone1_PredictTurnSimul 0.2
-#define Drone1_PreductTurnPlan 0.2
+#define Drone1_PredictTurnSimul 0.35
+#define Drone1_PreductTurnPlan 0.35
 #define Drone1_CyclicAsideForce 0.2
 #define Drone1_CyclicForwardForce 0.1
 #define Drone1_BackRotorForce 4
