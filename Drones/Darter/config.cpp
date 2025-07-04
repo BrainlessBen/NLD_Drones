@@ -30,8 +30,8 @@ class cfgPatches
 class cfgVehicles 
 {
 //Darter Base
-	class UAV_01_base_F;
-    class BEN_UAV_01_base_F: UAV_01_base_F
+	class BEN_UAV_01_base_F;
+    class BEN_Darter_base_F: BEN_UAV_01_base_F
     {
         author=AUTHOR;
 		altFullForce=Drone2_AltFullForce;
