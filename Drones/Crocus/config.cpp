@@ -41,8 +41,6 @@ class cfgVehicles
 		author=AUTHOR;
 		altFullForce=Drone2_AltFullForce;
 		altNoForce=Drone2_AltNoForce;
-        startDuration=Drone2_StartDuration;
-		maxSpeed=Drone2_MaxSpeed;
 		steerAheadSimul=Drone2_SteerAheadSimul;
 		steerAheadPlan=Drone2_SteerAheadPlan;
 		predictTurnPlan=Drone2_PreductTurnPlan;
@@ -185,7 +183,7 @@ class cfgVehicles
 	};
 
 //Crocus Drones
-	class BEN_B_Crocus_AP: BEN_CROCUS_base_F
+	class BEN_B_Crocus_AP: BEN_CROCUS_base_F 
 	{
 		author=AUTHOR;
 		displayName="Crocus AT (NLD)";
@@ -215,7 +213,7 @@ class cfgVehicles
 		};
 		class EventHandlers
 		{
-			class ArmaFPV
+			class BEN_ArmaFPV
 			{
 				hit="_this call BEN_fnc_onDestroy";
 				init="(_this # 0) spawn BEN_fnc_droneInit;";
@@ -236,6 +234,7 @@ class cfgVehicles
 			};
 		};
 	};
+
 	class BEN_O_Crocus_AP: BEN_CROCUS_base_F
 	{
 		author=AUTHOR;
@@ -265,7 +264,7 @@ class cfgVehicles
 		};
 		class EventHandlers
 		{
-			class ArmaFPV
+			class BEN_ArmaFPV
 			{
 				hit="_this call BEN_fnc_onDestroy";
 				init="(_this # 0) spawn BEN_fnc_droneInit;";
@@ -286,6 +285,7 @@ class cfgVehicles
 			};
 		};
 	};
+
 	class BEN_I_Crocus_AP: BEN_CROCUS_base_F
 	{
 		author=AUTHOR;
@@ -315,7 +315,7 @@ class cfgVehicles
 		};
 		class EventHandlers
 		{
-			class ArmaFPV
+			class BEN_ArmaFPV
 			{
 				hit="_this call BEN_fnc_onDestroy";
 				init="(_this # 0) spawn BEN_fnc_droneInit;";

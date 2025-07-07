@@ -30,34 +30,30 @@ default settings
     tailBladeVertical=0;
 */
 
-//Drone1 settings
-#define Drone1_MaxSpeed 50
+//Drone1 settings // [Parrot]
 #define Drone1_FuelCap 15
-#define Drone1_LiftForce 6
-#define Drone1_StartDuration 1
-#define Drone1_BodyFriction 0.25
-#define Drone1_AltFullForce 2000
+#define Drone1_LiftForce 50
+#define Drone1_BodyFriction 0.5
 #define Drone1_AltNoForce 6000
+#define Drone1_AltFullForce 4000
 #define Drone1_SteerAheadSimul 0.2
-#define Drone1_SteerAheadPlan 0.2
-#define Drone1_PredictTurnSimul 0.35
-#define Drone1_PreductTurnPlan 0.35
-#define Drone1_CyclicAsideForce 0.2
-#define Drone1_CyclicForwardForce 0.1
+#define Drone1_SteerAheadPlan 0.5
+#define Drone1_PredictTurnSimul 1
+#define Drone1_PreductTurnPlan 2
+#define Drone1_CyclicAsideForce 1.0
+#define Drone1_CyclicForwardForce 0.5
 #define Drone1_BackRotorForce 4
-#define Drone1_MainRotorSpeed -5
-#define Drone1_BackRotorSpeed 5
+#define Drone1_MainRotorSpeed -15
+#define Drone1_BackRotorSpeed 15
 #define Drone1_TailBladeRadius 0.5
 #define Drone1_TailBladeVertical 0
 
-//Drone2 settings
-#define Drone2_MaxSpeed 100
+//Drone2 settings // [Darter / Crocus]
 #define Drone2_FuelCap 5
 #define Drone2_LiftForce 7
-#define Drone2_StartDuration 1
 #define Drone2_BodyFriction 0.2
-#define Drone2_AltFullForce 500
-#define Drone2_AltNoForce 1000
+#define Drone2_AltNoForce 6000
+#define Drone2_AltFullForce 4000
 #define Drone2_SteerAheadSimul 0.2
 #define Drone2_SteerAheadPlan 0.6
 #define Drone2_PredictTurnSimul 2

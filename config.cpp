@@ -83,6 +83,411 @@ class CfgEditorSubcategories
 		displayName="Raven";
 	};
 };
+/*
+class DefaultAnalogCurveDefs
+{
+	class QuadcopterCyclicLeft
+	{
+		deadZone=0;
+		curve[]=
+		{
+			"Gamma",
+			1,
+			1
+		};
+	};
+	class QuadcopterCyclicRight
+	{
+		deadZone=0;
+		curve[]=
+		{
+			"Gamma",
+			1,
+			1
+		};
+	};
+	class QuadcopterRudderLeft
+	{
+		deadZone=0;
+		curve[]=
+		{
+			"Gamma",
+			1,
+			1
+		};
+	};
+	class QuadcopterRudderRight
+	{
+		deadZone=0;
+		curve[]=
+		{
+			"Gamma",
+			1,
+			1
+		};
+	};
+};
+
+class ControllerSchemes
+{
+	class Default
+	{
+		class Vehicles;
+	};
+	class BEN_Default: Default
+	{
+		class Vehicles: Vehicles
+		{
+			class Quadcopter
+			{
+				name="$STR_XBOX_CONTROLER_AIR";
+				axisY=1;
+				class Gamepad
+				{
+					class Actions
+					{
+						class QuadcopterCyclicBack
+						{
+							actionNameYAxis="QuadcopterCyclicForward";
+							keys[]=
+							{
+								"0x00050000 + 17"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterCyclicForward
+						{
+							actionNameYAxis="QuadcopterCyclicBack";
+							keys[]=
+							{
+								"0x00050000 + 21"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterCyclicLeft
+						{
+							keys[]=
+							{
+								"0x00050000 + 20"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterCyclicRight
+						{
+							keys[]=
+							{
+								"0x00050000 + 16"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterRudderLeft
+						{
+							keys[]=
+							{
+								"0x00050000 + 12"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterRudderRight
+						{
+							keys[]=
+							{
+								"0x00050000 + 13"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterCollectiveRaise
+						{
+							keys[]=
+							{
+								"0x00050000 + 11"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+						class QuadcopterCollectiveLower
+						{
+							keys[]=
+							{
+								"0x00050000 + 10"
+							};
+							deadZone=0;
+							curveLow[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveMedium[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+							curveHigh[]=
+							{
+								"Gamma",
+								1,
+								1.5
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+
+class CfgDefaultKeysPresets
+{
+	class Default
+	{
+		class Mappings;
+	};
+	class Quadcopter: Default
+	{
+		class Mappings: Mappings
+		{
+			quadcopterCyclicForward[]=
+			{
+				17,
+				200,
+				"(0x00100000  + 3)"
+			};
+			quadcopterCyclicBack[]=
+			{
+				31,
+				208,
+				"(0x00100000  + 2)"
+			};
+			quadcopterCyclicLeft[]={30,203};
+			quadcopterCyclicRight[]={32,205};
+			quadcopterLeft[]=
+			{
+				"(0x00100000  + 0)"
+			};
+			quadcopterRight[]=
+			{
+				"(0x00100000  + 1)"
+			};
+			quadcopterRudderLeft[]={45,211};
+			quadcopterRudderRight[]={46,207};
+			quadcopterCollectiveRaise[]={16};
+			quadcopterCollectiveLower[]={44};
+			quadcopterCollectiveRaiseCont[]={};
+			quadcopterCollectiveLowerCont[]={};
+			autoHover[]=
+			{
+				"256+0x2B"
+			};
+			autoHoverCancel[]={43};
+			cameraZoomIn[]={78};
+			cameraZoomOut[]={74};
+			lookDownCont[]={};
+			lookUpCont[]={};
+		};
+	};
+};
+*/
+class UserActionGroups
+{
+	class MovementQuadcopter
+	{
+		name="Quadcopter Movement";
+		group[]=
+		{
+			"HeliCyclicForward",
+			"HeliCyclicBack",
+			"HeliCyclicLeft",
+			"HeliCyclicRight",
+			"HeliLeft",
+			"HeliRight",
+			"HeliRudderLeft",
+			"HeliRudderRight",
+			"HeliCollectiveRaiseCont",
+			"HeliCollectiveLowerCont",
+			"HeliCollectiveRaise",
+			"HeliCollectiveLower",
+			"AutoHover",
+			"AutoHoverCancel"
+		};
+	};
+};
+class UserActionsConfictGroups
+{
+	class ActionGroups
+	{
+		Quadcopter[]=
+		{
+			"HeliCyclicForward",
+			"HeliCyclicBack",
+			"HeliCyclicLeft",
+			"HeliCyclicRight",
+			"HeliCollectiveRaise",
+			"HeliCollectiveLower",
+			"HeliCollectiveRaiseCont",
+			"HeliCollectiveLowerCont",
+			"HeliRudderLeft",
+			"HeliRudderRight",
+			"HeliLeft",
+			"HeliRight",
+			"AutoHover",
+			"AutoHoverCancel",
+			"LandGear",
+			"LandGearUp",
+			"HeliWheelsBrake",
+			"HelicopterTrimOn",
+			"HelicopterTrimOff",
+			"HeliTrimLeft",
+			"HeliTrimRight",
+			"HeliTrimForward",
+			"HeliTrimBackward",
+			"HeliTrimRudderLeft",
+			"HeliTrimRudderRight",
+			"HeliRopeAction",
+			"HeliSlingLoadManager",
+			"PilotCamera",
+			"CyclicForward",
+			"CyclicBack"
+		};
+	};
+	class CollisionGroups
+	{
+		Quadcopter[]=
+		{
+			"heli",
+			"quadcopter",
+			"vehBasic",
+			"basic",
+			"HeadMove"
+		};
+	};
+};
 
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
@@ -127,7 +532,7 @@ class cfgVehicles
 		class ViewPilot;
 		class Components;
 	};
-	class BEN_UAV_01_base_F: Helicopter_Base_F
+	class BEN_Quadcopter_base_F: Helicopter_Base_F
 	{
 		features="Randomization: No						<br />Camo selections: 1 - the whole body						<br />Script door sources: None						<br />Script animations: None						<br />Executed scripts: None						<br />Firing from vehicles: No						<br />Slingload: No						<br />Cargo proxy indexes: None";
 		author="$STR_A3_Bohemia_Interactive";
@@ -145,6 +550,10 @@ class cfgVehicles
 					"veh_air_UAV_p"
 				};
 			};
+		};
+		hiddenSelections[]=
+		{
+			"camo"
 		};
 		textSingular="$STR_A3_nameSound_veh_air_UAV_s";
 		textPlural="$STR_A3_nameSound_veh_air_UAV_p";
@@ -193,11 +602,18 @@ class cfgVehicles
 		icon="\A3\Drones_F\Air_F_Gamma\UAV_01\Data\UI\Map_UAV_01_CA.paa";
 		picture="\A3\Drones_F\Air_F_Gamma\UAV_01\Data\UI\UAV_01_CA.paa";
 		class RotorLibHelicopterProperties;
+		airBrakeFrictionCoef=0.0;
+		airFrictionCoefs0[]={0,0,0};
+		airFrictionCoefs1[]={0,0,0};
+		airFrictionCoefs2[]={0,0,0};
+		envelope[]={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+		minSmokeDamage=0.20000001;
+		maxSmokeDamage=0.77000001;
 		class Reflectors
 		{
 		};
-		startDuration=3;
-		maxSpeed=100;
+		startDuration=1;
+		maxSpeed=140;
 		precision=15;
 		steerAheadSimul=0.5;
 		steerAheadPlan=0.69999999;
@@ -208,7 +624,7 @@ class cfgVehicles
 		cyclicForwardForceCoef=1.2;
 		bodyFrictionCoef=0.30000001;
 		backRotorForceCoef=5;
-		fuelCapacity=100;
+		fuelCapacity=8.5;
 		maxFordingDepth=0.30000001;
 		threat[]={0.1,0.1,0.1};
 		maxMainRotorDive=0;
@@ -264,8 +680,8 @@ class cfgVehicles
 			maxFov=1.25;
 			initFov=1;
 			initAngleX=0;
-			minAngleX=-65;
-			maxAngleX=85;
+			minAngleX=-90;
+			maxAngleX=90;
 			initAngleY=0;
 			minAngleY=-150;
 			maxAngleY=150;
@@ -273,8 +689,8 @@ class cfgVehicles
 		class Viewoptics: ViewOptics
 		{
 			initAngleX=0;
-			minAngleX=0;
-			maxAngleX=0;
+			minAngleX=-65;
+			maxAngleX=65;
 			initAngleY=0;
 			minAngleY=0;
 			maxAngleY=0;
@@ -784,10 +1200,6 @@ class cfgVehicles
 		class Library
 		{
 			libTextDesc="$STR_A3_CfgVehicles_UAV_01_base_Library0";
-		};
-		hiddenSelections[]=
-		{
-			"camo"
 		};
 		class TextureSources
 		{

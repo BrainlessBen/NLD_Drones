@@ -30,8 +30,8 @@ class cfgPatches
 class cfgVehicles 
 {
 //Darter Base
-	class BEN_UAV_01_base_F;
-    class BEN_Darter_base_F: BEN_UAV_01_base_F
+	class BEN_Quadcopter_base_F;
+    class BEN_Darter_base_F: BEN_Quadcopter_base_F
     {
         author=AUTHOR;
 		altFullForce=Drone2_AltFullForce;
@@ -160,7 +160,7 @@ class cfgVehicles
     };
 
 //Darter Drones
-    class BEN_B_UAV_01_F: BEN_UAV_01_base_F
+    class BEN_B_UAV_01_F: BEN_Quadcopter_base_F
     {
         author=AUTHOR;
         displayName="AR-2 Darter (NLD)";
@@ -197,7 +197,7 @@ class cfgVehicles
 			};
 		};
     };
-    class BEN_O_UAV_01_F: BEN_UAV_01_base_F
+    class BEN_O_UAV_01_F: BEN_Quadcopter_base_F
     {
         author=AUTHOR;
         displayName="AR-2 Darter (NLD)";
@@ -234,7 +234,7 @@ class cfgVehicles
 			};
 		};
     };
-    class BEN_I_UAV_01_F: BEN_UAV_01_base_F
+    class BEN_I_UAV_01_F: BEN_Quadcopter_base_F
     {
         author=AUTHOR;
         displayName="AR-2 Darter (NLD)";

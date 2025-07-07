@@ -41,11 +41,11 @@ class cfgVehicles
 {
 //Parrot Base
 	class Helicopter_Base_F;
-	class BEN_UAV_01_base_F: Helicopter_Base_F
+	class BEN_Quadcopter_base_F: Helicopter_Base_F
 	{
 		class RotorLibHelicopterProperties;
 	};
-    class BEN_Parrot_Base_F: BEN_UAV_01_base_F
+    class BEN_Parrot_Base_F: BEN_Quadcopter_base_F
     {
         author=AUTHOR;
         icon="\NLD_Drones\Drones\Parrot\data\ui\map_uav_01_parrot_ca.paa";
@@ -54,17 +54,14 @@ class cfgVehicles
 		{
 			RTDconfig="\NLD_Drones\Drones\rtd_uav_01_parrot.xml";
 		};
-		simulation="helicopterrtd";
-		airBrakeFrictionCoef = 0.0;
-		airFrictionCoefs0[] = {0,0,0};
-		airFrictionCoefs1[] = {0,0,0};
-		airFrictionCoefs2[] = {0,0,0};
-		mainBladeCenter = "rotor_center";
-		tailBladeCenter = "rotor_02_center";
-		maxSpeed=Drone1_MaxSpeed;
+		simulation="helicopterrtd"; //helicopterrtd quadcopter
+		torqueCurve[]={{0.0,0.8},{0.8,1.0},{1.0,0.8}};
+		engineMOI=0.3;
+		dampingRateFullThrottle=0.08;
+		dampingRateZeroThrottleClutchEngaged=2.0;
+		dampingRateZeroThrottleClutchDisengaged=2.0;
 		fuelCapacity=Drone1_FuelCap;
 		liftForceCoef=Drone1_LiftForce;
-        startDuration=Drone1_StartDuration;
 		bodyFrictionCoef=Drone1_BodyFriction;
 		altFullForce=Drone1_AltFullForce;
 		altNoForce=Drone1_AltNoForce;
