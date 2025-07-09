@@ -84,6 +84,164 @@ class CfgEditorSubcategories
 	};
 };
 /*
+//Custom user actions
+class cfgUserActions
+{
+	class quadcopterCyclicForward
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCyclicBack
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCyclicLeft
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCyclicRight
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterLeft
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterRight
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterRudderLeft
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterRudderRight
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCollectiveRaise
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCollectiveLower
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCollectiveRaiseCont
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadcopterCollectiveLowerCont
+	{
+		displayName="";
+		tooltip="";
+		onActivate="";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+};
+
+class CfgDefaultKeysPresets
+{
+	class Arma2
+	{
+		class Mappings
+		{
+			quadcopterCyclicForward[]=
+			{
+				17,
+				200,
+				"(0x00100000  + 3)"
+			};
+			quadcopterCyclicBack[]=
+			{
+				31,
+				208,
+				"(0x00100000  + 2)"
+			};
+			quadcopterCyclicLeft[]={30,203};
+			quadcopterCyclicRight[]={32,205};
+			quadcopterLeft[]=
+			{
+				"(0x00100000  + 0)"
+			};
+			quadcopterRight[]=
+			{
+				"(0x00100000  + 1)"
+			};
+			quadcopterRudderLeft[]={45,211};
+			quadcopterRudderRight[]={46,207};
+			quadcopterCollectiveRaise[]={16};
+			quadcopterCollectiveLower[]={44};
+			quadcopterCollectiveRaiseCont[]={};
+			quadcopterCollectiveLowerCont[]={};
+			autoHover[]=
+			{
+				"256+0x2B"
+			};
+			autoHoverCancel[]={43};
+			cameraZoomIn[]={78};
+			cameraZoomOut[]={74};
+		};
+	};
+};
+
 class DefaultAnalogCurveDefs
 {
 	class QuadcopterCyclicLeft
@@ -124,292 +282,6 @@ class DefaultAnalogCurveDefs
 			"Gamma",
 			1,
 			1
-		};
-	};
-};
-
-class ControllerSchemes
-{
-	class Default
-	{
-		class Vehicles;
-	};
-	class BEN_Default: Default
-	{
-		class Vehicles: Vehicles
-		{
-			class Quadcopter
-			{
-				name="$STR_XBOX_CONTROLER_AIR";
-				axisY=1;
-				class Gamepad
-				{
-					class Actions
-					{
-						class QuadcopterCyclicBack
-						{
-							actionNameYAxis="QuadcopterCyclicForward";
-							keys[]=
-							{
-								"0x00050000 + 17"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterCyclicForward
-						{
-							actionNameYAxis="QuadcopterCyclicBack";
-							keys[]=
-							{
-								"0x00050000 + 21"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterCyclicLeft
-						{
-							keys[]=
-							{
-								"0x00050000 + 20"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterCyclicRight
-						{
-							keys[]=
-							{
-								"0x00050000 + 16"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterRudderLeft
-						{
-							keys[]=
-							{
-								"0x00050000 + 12"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterRudderRight
-						{
-							keys[]=
-							{
-								"0x00050000 + 13"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterCollectiveRaise
-						{
-							keys[]=
-							{
-								"0x00050000 + 11"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-						class QuadcopterCollectiveLower
-						{
-							keys[]=
-							{
-								"0x00050000 + 10"
-							};
-							deadZone=0;
-							curveLow[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveMedium[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-							curveHigh[]=
-							{
-								"Gamma",
-								1,
-								1.5
-							};
-						};
-					};
-				};
-			};
-		};
-	};
-};
-
-class CfgDefaultKeysPresets
-{
-	class Default
-	{
-		class Mappings;
-	};
-	class Quadcopter: Default
-	{
-		class Mappings: Mappings
-		{
-			quadcopterCyclicForward[]=
-			{
-				17,
-				200,
-				"(0x00100000  + 3)"
-			};
-			quadcopterCyclicBack[]=
-			{
-				31,
-				208,
-				"(0x00100000  + 2)"
-			};
-			quadcopterCyclicLeft[]={30,203};
-			quadcopterCyclicRight[]={32,205};
-			quadcopterLeft[]=
-			{
-				"(0x00100000  + 0)"
-			};
-			quadcopterRight[]=
-			{
-				"(0x00100000  + 1)"
-			};
-			quadcopterRudderLeft[]={45,211};
-			quadcopterRudderRight[]={46,207};
-			quadcopterCollectiveRaise[]={16};
-			quadcopterCollectiveLower[]={44};
-			quadcopterCollectiveRaiseCont[]={};
-			quadcopterCollectiveLowerCont[]={};
-			autoHover[]=
-			{
-				"256+0x2B"
-			};
-			autoHoverCancel[]={43};
-			cameraZoomIn[]={78};
-			cameraZoomOut[]={74};
-			lookDownCont[]={};
-			lookUpCont[]={};
 		};
 	};
 };
@@ -676,8 +548,8 @@ class cfgVehicles
 		};
 		class ViewPilot: ViewPilot
 		{
-			minFov=0.25;
-			maxFov=1.25;
+			minFov=0.1;
+			maxFov=1.4;
 			initFov=1;
 			initAngleX=0;
 			minAngleX=-90;

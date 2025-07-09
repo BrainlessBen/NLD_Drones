@@ -32,7 +32,7 @@ default settings
 
 //Drone1 settings // [Parrot]
 #define Drone1_FuelCap 15
-#define Drone1_LiftForce 50
+#define Drone1_LiftForce 10
 #define Drone1_BodyFriction 0.5
 #define Drone1_AltNoForce 6000
 #define Drone1_AltFullForce 4000

@@ -52,11 +52,22 @@ class cfgVehicles
         picture="\NLD_Drones\Drones\Parrot\data\ui\uav_01_parrot_ca.paa";
 		class RotorLibHelicopterProperties: RotorLibHelicopterProperties
 		{
-			RTDconfig="\NLD_Drones\Drones\rtd_uav_01_parrot.xml";
+			//RTDconfig="A3\Air_F\Heli_Light_01\RTD_Heli_Light_01.xml";
+			RTDconfig="\NLD_Drones\Drones\Parrot\rtd_uav_01_parrot.xml";
+			autoHoverCorrection[]={6.5,0,0};			//{6.5,0,0}
+			defaultCollective=0.2; 						//0.60500002
+			retreatBladeStallWarningSpeed=50;
+			maxTorque=900;								//4032
+			stressDamagePerSec=0.0;
+			maxHorizontalStabilizerLeftStress=10000;
+			maxHorizontalStabilizerRightStress=10000;
+			maxVerticalStabilizerStress=10000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=350000;
+			maxTailRotorStress=350000;
 		};
 		simulation="helicopterrtd"; //helicopterrtd quadcopter
-		torqueCurve[]={{0.0,0.8},{0.8,1.0},{1.0,0.8}};
-		engineMOI=0.3;
 		dampingRateFullThrottle=0.08;
 		dampingRateZeroThrottleClutchEngaged=2.0;
 		dampingRateZeroThrottleClutchDisengaged=2.0;
