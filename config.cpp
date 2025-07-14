@@ -83,7 +83,7 @@ class CfgEditorSubcategories
 		displayName="Raven";
 	};
 };
-/*
+
 //Custom user actions
 class cfgUserActions
 {
@@ -196,7 +196,7 @@ class cfgUserActions
 		analogChangeThreshold=0.1;
 	};
 };
-
+/*
 class CfgDefaultKeysPresets
 {
 	class Arma2
