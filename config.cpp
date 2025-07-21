@@ -195,6 +195,24 @@ class cfgUserActions
 		onAnalog="";
 		analogChangeThreshold=0.1;
 	};
+	class quadCopterCamUp
+	{
+		displayName="Tilt camera up";
+		tooltip="Tilt camera up";
+		onActivate="[nil,true] execVM '\NLD_Drones\Scripts\droneCamRot.sqf'";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
+	class quadCopterCamDown
+	{
+		displayName="Tilt camera down";
+		tooltip="Tilt camera down";
+		onActivate="[nil,false] execVM '\NLD_Drones\Scripts\droneCamRot.sqf'";
+		onDeactivate="";
+		onAnalog="";
+		analogChangeThreshold=0.1;
+	};
 };
 /*
 class CfgDefaultKeysPresets
@@ -291,6 +309,7 @@ class UserActionGroups
 	class MovementQuadcopter
 	{
 		name="Quadcopter Movement";
+		isAddon=1;
 		group[]=
 		{
 			"HeliCyclicForward",
@@ -306,11 +325,13 @@ class UserActionGroups
 			"HeliCollectiveRaise",
 			"HeliCollectiveLower",
 			"AutoHover",
-			"AutoHoverCancel"
+			"AutoHoverCancel",
+			"quadCopterCamUp",
+			"quadCopterCamDown"
 		};
 	};
 };
-class UserActionsConfictGroups
+class UserActionsConflictGroups
 {
 	class ActionGroups
 	{
@@ -345,15 +366,18 @@ class UserActionsConfictGroups
 			"HeliSlingLoadManager",
 			"PilotCamera",
 			"CyclicForward",
-			"CyclicBack"
+			"CyclicBack",
+			"quadCopterCamUp",
+			"quadCopterCamDown"
 		};
 	};
 	class CollisionGroups
 	{
+		heli[] += {"Quadcopter"};
 		Quadcopter[]=
 		{
-			"heli",
 			"quadcopter",
+			"heli",
 			"vehBasic",
 			"basic",
 			"HeadMove"
@@ -484,8 +508,8 @@ class cfgVehicles
 		class Reflectors
 		{
 		};
-		startDuration=1;
-		maxSpeed=140;
+		startDuration=0;
+		maxSpeed=250;
 		precision=15;
 		steerAheadSimul=0.5;
 		steerAheadPlan=0.69999999;
@@ -566,8 +590,8 @@ class cfgVehicles
 			initAngleY=0;
 			minAngleY=0;
 			maxAngleY=0;
-			minFov=0.25;
-			maxFov=1.25;
+			minFov=0.1;
+			maxFov=1.4;
 			initFov=0.75;
 			visionMode[]=
 			{

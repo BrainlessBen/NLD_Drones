@@ -33,7 +33,7 @@ default settings
 //Drone1 settings // [Parrot]
 #define Drone1_FuelCap 15
 #define Drone1_LiftForce 10
-#define Drone1_BodyFriction 0.5
+#define Drone1_BodyFriction 0.1
 #define Drone1_AltNoForce 6000
 #define Drone1_AltFullForce 4000
 #define Drone1_SteerAheadSimul 0.2
@@ -43,9 +43,10 @@ default settings
 #define Drone1_CyclicAsideForce 1.0
 #define Drone1_CyclicForwardForce 0.5
 #define Drone1_BackRotorForce 4
-#define Drone1_MainRotorSpeed -15
+#define Drone1_MainRotorSpeed 15
 #define Drone1_BackRotorSpeed 15
-#define Drone1_TailBladeRadius 0.5
+#define Drone1_MainBladeRadius 0.2
+#define Drone1_TailBladeRadius 0.2
 #define Drone1_TailBladeVertical 0
 
 //Drone2 settings // [Darter / Crocus]
@@ -63,5 +64,6 @@ default settings
 #define Drone2_BackRotorForce 4
 #define Drone2_MainRotorSpeed -10
 #define Drone2_BackRotorSpeed 10
-#define Drone2_TailBladeRadius 0.5
+#define Drone2_MainBladeRadius 0.2
+#define Drone2_TailBladeRadius 0.2
 #define Drone2_TailBladeVertical 0

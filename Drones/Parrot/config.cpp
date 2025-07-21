@@ -67,7 +67,8 @@ class cfgVehicles
 			maxMainRotorStress=350000;
 			maxTailRotorStress=350000;
 		};
-		simulation="helicopterrtd"; //helicopterrtd quadcopter
+		simulation="helicopterX"; //helicopterrtd quadcopter
+		mass=20;
 		dampingRateFullThrottle=0.08;
 		dampingRateZeroThrottleClutchEngaged=2.0;
 		dampingRateZeroThrottleClutchDisengaged=2.0;
@@ -85,6 +86,7 @@ class cfgVehicles
 		backRotorForceCoef=Drone1_BackRotorForce;
         mainRotorSpeed=Drone1_MainRotorSpeed;
 		backRotorSpeed=Drone1_BackRotorSpeed;
+		mainBladeRadius=Drone1_MainBladeRadius;
 		tailBladeRadius=Drone1_TailBladeRadius;
 		tailBladeVertical=Drone1_TailBladeVertical;
 		radarTargetSize=0.025;
@@ -324,7 +326,38 @@ class cfgVehicles
                 onlyForplayer=1;
                 showWindow=1;
             };
+			/*
+			class Drone_CamUp
+			{
+				displayName="Tilt camera up";
+				displayNameDefault="<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Tilt camera up</t>";
+				condition="deg(this animationPhase 'pilotCamRot') < 60";
+				statement="[this,true] execVM '\NLD_Drones\Scripts\droneCamRot.sqf'";
+				position="";
+				priority=10;
+				radius=1.8;
+				animPeriod=1;
+				onlyForplayer=1;
+				showWindow=1;
+			};
+			class Drone_CamDown: Drone_CamUp
+			{
+				displayName="Tilt camera down";
+				displayNameDefault="<t align='center'><img image='a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa' size='1.8' /><br/></t><t align='center'>Tilt camera down</t>";
+				condition="deg(this animationPhase 'pilotCamRot') > -15";
+				statement="[this,false] execVM '\NLD_Drones\Scripts\droneCamRot.sqf'";
+			};
+			*/
         };
+		class AnimationSources
+		{
+			class pilotCamRot
+			{
+				source="user";
+				animPeriod=1;
+				initPhase=0;
+			};
+		};
     };
     class BEN_O_Parrot_ANAFI:BEN_B_Parrot_ANAFI
     {
